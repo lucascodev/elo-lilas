@@ -12,6 +12,7 @@ export function useEscapeShortcut(onTrigger: () => void) {
       if (event.key !== "Escape") return;
       const now = performance.now();
       if (isDoublePress(lastPressAt.current, now, QUICK_EXIT_SETTINGS.doublePressWindowMs)) {
+        event.preventDefault();
         onTrigger();
         return;
       }
