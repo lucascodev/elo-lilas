@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Precisa de ajuda agora?
+    url: https://lucascodev.github.io/elo-lilas/ajuda/
+    about: Em emergência, ligue 190. Para orientação, ligue 180 (Central de Atendimento à Mulher). Issues não são um canal de denúncia.
+  - name: Falha de segurança
+    url: https://github.com/lucascodev/elo-lilas/security/advisories/new
+    about: Relate em particular. Não abra issue pública para falhas de segurança.

@@ -1,0 +1,47 @@
+name: Dado incorreto
+description: Telefone, endereço, horário ou link errado na rede de apoio ou nos canais de ajuda.
+title: "[Dado incorreto]: "
+labels: [dado-incorreto]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta issue é pública. **Não escreva dados pessoais seus ou de outra pessoa.**
+        Em emergência, ligue 190.
+  - type: input
+    id: service
+    attributes:
+      label: Serviço ou canal
+      description: Nome como aparece no site.
+      placeholder: CRAS Agenor Monteiro
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Página
+      placeholder: https://lucascodev.github.io/elo-lilas/rede-de-apoio/
+  - type: textarea
+    id: wrong-data
+    attributes:
+      label: O que está errado
+    validations:
+      required: true
+  - type: textarea
+    id: correct-data
+    attributes:
+      label: Dado correto
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Fonte
+      description: Site oficial, publicação da prefeitura ou confirmação por telefone.
+    validations:
+      required: true
+  - type: input
+    id: verified-at
+    attributes:
+      label: Data da confirmação
+      placeholder: 2026-11-18
