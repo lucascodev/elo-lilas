@@ -2,6 +2,8 @@
 
 Site de informação, orientação e conexão com a rede de apoio para enfrentamento da violência doméstica.
 
+**Site:** [lucascodev.github.io/elo-lilas](https://lucascodev.github.io/elo-lilas/)
+
 Projeto de Ensino Extensionista da UNIASSELVI: **Desenvolvimento de sites ou aplicativos sobre violência doméstica** (149 h, ODS 16: Paz, Justiça e Instituições Eficazes).
 
 ## Por que "Elo Lilás"
@@ -52,7 +54,9 @@ NEXT_PUBLIC_BASE_PATH=/elo-lilas npm run build
 
 ## Como contribuir
 
-Veja o [CONTRIBUTING.md](CONTRIBUTING.md). Ele explica as regras de segurança do projeto e como adaptar o site para outra cidade.
+Veja o [CONTRIBUTING.md](CONTRIBUTING.md). Ele explica as regras de segurança do projeto e como adaptar o site para outra cidade. A participação segue o [código de conduta](CODE_OF_CONDUCT.md).
+
+Falhas de segurança são relatadas em particular, como explica o [SECURITY.md](SECURITY.md).
 
 ## Estrutura do código
 
