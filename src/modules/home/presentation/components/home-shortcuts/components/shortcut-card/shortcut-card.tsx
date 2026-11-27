@@ -12,7 +12,7 @@ type ShortcutCardProps = {
 
 export function ShortcutCard({ href, icon, title, description, highlighted = false }: ShortcutCardProps) {
   const isExternal = !href.startsWith("/");
-  const className = `group flex items-center gap-3.5 rounded-card border p-4 no-underline md:flex-col md:items-start md:gap-4 md:p-7 ${
+  const className = `group flex h-full items-center gap-3.5 rounded-card border p-4 no-underline md:flex-col md:items-start md:gap-4 md:p-7 ${
     highlighted ? "border-primary bg-primary hover:bg-primary-dark" : "border-line bg-white hover:border-primary"
   }`;
   const content = (
