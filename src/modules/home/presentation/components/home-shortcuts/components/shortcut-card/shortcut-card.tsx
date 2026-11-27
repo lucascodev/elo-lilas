@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { TrackEventAttributes } from "@/modules/analytics/presentation/utils/track-event-attributes.type";
 import type { IconName } from "@/shared/presentation/components/icons/icon/icon-name.type";
 import { Icon } from "@/shared/presentation/components/icons/icon/icon";
 
@@ -8,9 +9,10 @@ type ShortcutCardProps = {
   title: string;
   description: string;
   highlighted?: boolean;
+  trackEventAttributes?: TrackEventAttributes;
 };
 
-export function ShortcutCard({ href, icon, title, description, highlighted = false }: ShortcutCardProps) {
+export function ShortcutCard({ href, icon, title, description, highlighted = false, trackEventAttributes }: ShortcutCardProps) {
   const isExternal = !href.startsWith("/");
   const className = `group flex h-full items-center gap-3.5 rounded-card border p-4 no-underline md:flex-col md:items-start md:gap-4 md:p-7 ${
     highlighted ? "border-primary bg-primary hover:bg-primary-dark" : "border-line bg-white hover:border-primary"
@@ -30,7 +32,7 @@ export function ShortcutCard({ href, icon, title, description, highlighted = fal
 
   if (isExternal) {
     return (
-      <a href={href} className={className}>
+      <a href={href} className={className} {...trackEventAttributes}>
         {content}
       </a>
     );
