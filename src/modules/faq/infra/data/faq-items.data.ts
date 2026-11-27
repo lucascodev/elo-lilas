@@ -33,9 +33,15 @@ export const FAQ_ITEMS_DATA: FaqItem[] = [
     order: 5,
   },
   {
+    id: "city-without-creas",
+    question: "Minha cidade não tem CREAS. Quem me atende?",
+    answer: "O CRAS é a porta de entrada da assistência social. Nas cidades pequenas, que não têm CREAS, os casos de violência são atendidos pela equipe técnica do órgão gestor, o departamento de assistência social do município.",
+    order: 6,
+  },
+  {
     id: "privacy",
     question: "Este site guarda o que eu pesquiso?",
     answer: "Não. O site não usa cookies de rastreamento, não pede cadastro e não guarda suas respostas. Para não deixar rastro no aparelho, use a aba anônima do navegador.",
-    order: 6,
+    order: 7,
   },
 ];
