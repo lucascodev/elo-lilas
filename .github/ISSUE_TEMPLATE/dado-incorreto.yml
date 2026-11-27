@@ -13,7 +13,7 @@ body:
     attributes:
       label: Serviço ou canal
       description: Nome como aparece no site.
-      placeholder: CRAS Agenor Monteiro
+      placeholder: CRAS de Rubinéia
     validations:
       required: true
   - type: input
