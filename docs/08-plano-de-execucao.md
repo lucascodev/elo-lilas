@@ -34,7 +34,7 @@ Lembrete: no máximo 8 h de extensão por dia, então o projeto leva no mínimo 
 | Saída rápida | Manual em Android e iOS, Chrome e Safari | Substitui a página e não volta pelo histórico |
 | Acessibilidade | Lighthouse, axe DevTools, navegação só por teclado, leitor de tela (TalkBack e NVDA) | WCAG 2.1 AA sem erros críticos |
 | Desempenho | Lighthouse com throttling 4G, WebPageTest | LCP < 2,5 s, página inicial < 1 MB |
-| Privacidade | Aba Network: só o Cloudflare Web Analytics fora do domínio; verificação de cookies e do armazenamento do navegador | Zero cookies, nada gravado no aparelho e nenhuma outra requisição a terceiros |
+| Privacidade | Aba Network: só o Cloudflare Web Analytics e o GoatCounter fora do domínio, este apenas ao tocar em "Ligar" ou "Ver rota"; verificação de cookies e do armazenamento do navegador | Zero cookies, nada gravado no aparelho e nenhuma outra requisição a terceiros |
 | Usabilidade | Teste com 5 profissionais da instituição com tarefas (achar o 180, achar a DEAM, fazer o teste) | 100% das tarefas concluídas, SUS acima de 68 |
 | Conteúdo | Revisão da instituição | Aprovação registrada por página |
 
