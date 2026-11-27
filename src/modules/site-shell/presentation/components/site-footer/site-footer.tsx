@@ -47,7 +47,7 @@ export function SiteFooter({ siteName, partnerName, contentReviewedAt }: SiteFoo
             <span className="font-heading text-xl font-bold text-white">{siteName}</span>
           </p>
           <p className="text-[15px] leading-6 text-on-dark">
-            Uma iniciativa de {partnerName} com o projeto de extensão da UNIASSELVI.
+            Projeto de extensão da UNIASSELVI. Instituição parceira: {partnerName}.
           </p>
           <p className="text-[13px] text-on-dark">Conteúdo revisado em {contentReviewedAt}</p>
         </div>

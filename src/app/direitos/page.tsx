@@ -24,7 +24,7 @@ export default async function RightsPage() {
         image={{ src: "/images/conversation.webp", alt: "Duas mulheres conversam sorrindo em uma mesa de café", width: 1000, height: 563 }}
       >
         <p className="text-sm text-muted">
-          Revisado pela {settings.partnerName} em {settings.contentReviewedAt}
+          Revisado pela instituição parceira, {settings.partnerName}, em {settings.contentReviewedAt}
         </p>
       </PageIntro>
       <ContentWithAside
