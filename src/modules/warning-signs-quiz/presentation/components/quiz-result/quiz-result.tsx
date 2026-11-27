@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { toTrackEventAttributes } from "@/modules/analytics/presentation/utils/to-track-event-attributes";
 import { Icon } from "@/shared/presentation/components/icons/icon/icon";
 
 type QuizResultProps = {
@@ -16,11 +17,11 @@ export function QuizResult({ badge, title, text, onRestart }: QuizResultProps) {
       <p className="md:text-lg md:leading-7">{text}</p>
       <p className="text-sm text-muted">Este teste é uma orientação, não um diagnóstico.</p>
       <div className="flex flex-col gap-3 md:flex-row md:flex-wrap">
-        <a href="tel:190" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-[1.5px] border-primary bg-primary px-5 font-heading font-semibold text-white no-underline hover:bg-primary-dark hover:text-white">
+        <a href="tel:190" {...toTrackEventAttributes("canal", "military-police", "190 Emergência")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-[1.5px] border-primary bg-primary px-5 font-heading font-semibold text-white no-underline hover:bg-primary-dark hover:text-white">
           <Icon name="phone" size={18} />
           Ligar 190 (emergência)
         </a>
-        <a href="tel:180" className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-[1.5px] border-primary px-5 font-heading font-semibold text-primary no-underline hover:bg-soft">
+        <a href="tel:180" {...toTrackEventAttributes("canal", "dial-180", "180 Central da Mulher")} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-[1.5px] border-primary px-5 font-heading font-semibold text-primary no-underline hover:bg-soft">
           <Icon name="phone" size={18} />
           Ligar 180
         </a>

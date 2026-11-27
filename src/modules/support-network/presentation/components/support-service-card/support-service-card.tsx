@@ -1,3 +1,4 @@
+import { toTrackEventAttributes } from "@/modules/analytics/presentation/utils/to-track-event-attributes";
 import { Icon } from "@/shared/presentation/components/icons/icon/icon";
 import type { SupportServiceCardViewModel } from "../../view-models/support-service-card-view-model.type";
 
@@ -33,6 +34,7 @@ export function SupportServiceCard({ service }: SupportServiceCardProps) {
         {service.phoneHref ? (
           <a
             href={service.phoneHref}
+            {...toTrackEventAttributes("ligar", service.id, `Ligar: ${service.name}`)}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border-[1.5px] border-primary bg-primary font-heading text-[15px] font-semibold text-white no-underline hover:bg-primary-dark hover:text-white"
           >
             <Icon name="phone" size={18} />
@@ -43,6 +45,7 @@ export function SupportServiceCard({ service }: SupportServiceCardProps) {
         )}
         <a
           href={service.routeHref}
+          {...toTrackEventAttributes("rota", service.id, `Ver rota: ${service.name}`)}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex min-h-12 items-center justify-center rounded-xl border-[1.5px] border-primary font-heading text-[15px] font-semibold text-primary no-underline hover:bg-soft"
