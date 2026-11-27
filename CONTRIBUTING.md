@@ -12,7 +12,7 @@ Obrigado pelo interesse no Elo Lilás. Este guia explica como sugerir mudanças 
 
 O público do site pode estar em risco. Toda contribuição precisa manter:
 
-- **Sem rastreamento:** nada de analytics, pixels, fontes ou scripts de terceiros. Tudo é servido pelo próprio site.
+- **Sem rastreamento:** nada de cookies, pixels, fontes ou scripts de terceiros, e nada gravado no aparelho de quem acessa. A única exceção é o Cloudflare Web Analytics, que conta as visitas de forma anônima e só entra no build quando o secret `CLOUDFLARE_ANALYTICS_TOKEN` está definido. Todo o resto é servido pelo próprio site.
 - **Saída rápida** funcionando em todas as páginas (botão e Esc duas vezes).
 - **Acessibilidade WCAG 2.1 AA:** contraste, navegação por teclado, foco visível e textos alternativos.
 - **Linguagem simples e acolhedora**, sem julgamento.
