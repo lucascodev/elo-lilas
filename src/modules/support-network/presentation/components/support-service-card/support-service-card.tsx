@@ -29,7 +29,7 @@ export function SupportServiceCard({ service }: SupportServiceCardProps) {
           Dados verificados há mais de 6 meses. Confirme por telefone antes de ir.
         </p>
       )}
-      <div className="mt-1 grid grid-cols-2 gap-2">
+      <div className="mt-auto grid grid-cols-2 gap-2 pt-1">
         {service.phoneHref ? (
           <a
             href={service.phoneHref}
