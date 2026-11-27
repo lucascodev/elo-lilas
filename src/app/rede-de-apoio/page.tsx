@@ -18,7 +18,7 @@ export default async function SupportNetworkPage() {
         crumbs={[{ label: "Rede de apoio" }]}
         eyebrow="Rede de apoio"
         title={`Onde buscar atendimento em ${settings.municipality}`}
-        lead={`Serviços públicos e organizações que acolhem pessoas em situação de violência. Dados mantidos pela ${settings.partnerName}.`}
+        lead={`Serviços públicos e organizações que acolhem pessoas em situação de violência. Dados mantidos pela instituição parceira, ${settings.partnerName}.`}
         image={{ src: "/images/support-network.webp", alt: "Mãos de várias pessoas unidas, simbolizando uma rede de apoio", width: 1000, height: 667 }}
       />
       <div className="mx-auto max-w-7xl px-5 py-6 pb-12 md:px-12 md:py-14 md:pb-22">

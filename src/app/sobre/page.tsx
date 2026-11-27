@@ -17,7 +17,7 @@ export default async function AboutPage() {
         crumbs={[{ label: "Sobre" }]}
         eyebrow="Sobre o projeto"
         title="Informação que protege"
-        lead={`O Elo Lilás nasceu de um projeto de extensão da UNIASSELVI ligado ao ODS 16 (Paz, Justiça e Instituições Eficazes), em parceria com a ${settings.partnerName}.`}
+        lead={`O Elo Lilás nasceu de um projeto de extensão da UNIASSELVI ligado ao ODS 16 (Paz, Justiça e Instituições Eficazes). Instituição parceira: ${settings.partnerName}.`}
         image={{ src: "/images/support-network.webp", alt: "Mãos de várias pessoas unidas", width: 1000, height: 667 }}
       />
       <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 pb-12 md:gap-6 md:px-12 md:py-18 md:pb-22">
