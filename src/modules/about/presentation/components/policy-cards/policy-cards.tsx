@@ -6,7 +6,7 @@ const POLICIES: { id: string; icon: IconName; title: string; text: string }[] = 
     id: "privacy",
     icon: "lock",
     title: "Privacidade",
-    text: "Este site não usa cookies de rastreamento, não pede cadastro e não guarda nada do que você lê ou responde. As fontes e imagens vêm do próprio site, sem chamadas a serviços de terceiros.",
+    text: "Este site não usa cookies de rastreamento, não pede cadastro e não guarda nada do que você lê ou responde. Para saber quantas pessoas o site alcança, contamos as visitas de forma anônima com o Cloudflare Web Analytics, que não grava nada no seu aparelho. As fontes e imagens vêm do próprio site.",
   },
   {
     id: "accessibility",

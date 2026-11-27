@@ -41,7 +41,7 @@ Motivos: atende de forma nativa os requisitos de privacidade e desempenho, que s
   - `presentation`: páginas, componentes e hooks, cada um em pasta própria.
 - **CMS:** Sanity com schemas `page`, `supportService`, `faq`, `news`, `siteSettings`.
 - **Publicação:** hospedagem estática gratuita (Cloudflare Pages ou Netlify), com rebuild por webhook do Sanity ao publicar. Conferir se o plano gratuito escolhido permite uso por organização sem fins lucrativos.
-- **Métricas:** nenhuma no MVP; se a instituição pedir, ferramenta sem cookies.
+- **Métricas:** Cloudflare Web Analytics, gratuito e sem cookies, sem nada gravado no aparelho e sem identificar a visitante. É o único script de terceiros do site (exceção ao RNF04), aceito em troca de um fornecedor estável e sem custo; o GoatCounter, que dispensaria o script externo, foi descartado por depender de uma única pessoa. O script só entra no build quando o secret `CLOUDFLARE_ANALYTICS_TOKEN` do repositório está definido, e o CSP libera apenas `static.cloudflareinsights.com` e `cloudflareinsights.com`. O painel guarda seis meses de dados, com amostragem depois de sete dias.
 - **Repositório:** GitHub, com README de manutenção e guia de edição para a instituição.
 
 ### Consequências
