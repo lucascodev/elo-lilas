@@ -68,7 +68,10 @@ export function HelpPaths({ channels, onlinePoliceReport }: HelpPathsProps) {
         </div>
       </HelpPathCard>
       <HelpPathCard step={5} icon="users" title="Apoio psicológico e social">
-        <p>O CRAS, o CREAS e o Centro de Referência da Mulher acolhem você e sua família.</p>
+        <p>
+          O CRAS, o CREAS e o Centro de Referência da Mulher acolhem você e sua família. Nas cidades pequenas, sem CREAS, quem atende os casos de
+          violência é o órgão gestor da assistência social.
+        </p>
         <ButtonLink href="/rede-de-apoio/" variant="outline" className="self-start">
           Ver endereços
         </ButtonLink>
