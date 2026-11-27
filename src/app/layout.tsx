@@ -7,6 +7,7 @@ import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { makeWebAnalyticsConfig, WebAnalyticsBeacon } from "@/modules/analytics";
 import { EmergencyBar, makeListHelpChannels } from "@/modules/help-channels";
 import { QuickExitShortcut } from "@/modules/quick-exit";
 import { makeGetSiteSettings } from "@/modules/site-settings";
@@ -29,7 +30,11 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     makeGetSiteSettings().execute(),
     makeListHelpChannels().execute({ scope: "emergency-bar" }),
   ]);
-  const contentSecurityPolicy = buildContentSecurityPolicy({ isDevelopment: process.env.NODE_ENV === "development" });
+  const webAnalytics = makeWebAnalyticsConfig();
+  const contentSecurityPolicy = buildContentSecurityPolicy({
+    isDevelopment: process.env.NODE_ENV === "development",
+    extraSources: webAnalytics?.contentSecurityPolicySources,
+  });
 
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
@@ -44,6 +49,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         </main>
         <SiteFooter siteName={settings.siteName} partnerName={settings.partnerName} contentReviewedAt={settings.contentReviewedAt} />
         <EmergencyBar channels={emergencyChannels} />
+        {webAnalytics && <WebAnalyticsBeacon token={webAnalytics.token} beaconScriptUrl={webAnalytics.beaconScriptUrl} />}
       </body>
     </html>
   );
