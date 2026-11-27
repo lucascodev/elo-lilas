@@ -115,7 +115,7 @@ O conteúdo fica hoje em arquivos `infra/data/*.data.ts` de cada módulo. Quando
 
 ## Pendências
 
-1. Município definido: Rubinéia (SP). Falta confirmar a instituição parceira (candidata: CRAS Agenor Monteiro) e validar a rede local ([checklist](docs/09-rede-local-rubineia.md#checklist-de-validação)).
+1. Município e instituição parceira definidos: Rubinéia (SP), com o Departamento de Assistência e Desenvolvimento Social e o CRAS. Falta validar a rede local ([checklist](docs/09-rede-local-rubineia.md#checklist-de-validação)).
 2. Fazer a inscrição na atividade no AVA (botão "Incluir").
 3. Validar requisitos e protótipo com a instituição (entrevista, grupo focal e atividade 13).
 4. Substituir os textos entre [COLCHETES] pelos dados reais.
