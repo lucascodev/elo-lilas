@@ -15,7 +15,7 @@ O relato fica visível só para o mantenedor até a correção ser publicada.
 ## O que relatar
 
 - Saída rápida (botão ou Esc duas vezes) que não funciona ou deixa rastro na tela ou no histórico.
-- Qualquer recurso, script, fonte ou imagem carregado de terceiros, exceto o Cloudflare Web Analytics.
+- Qualquer recurso, script, fonte ou imagem carregado de terceiros, exceto o Cloudflare Web Analytics e o envio de cliques ao GoatCounter.
 - Dado de quem acessa sendo salvo, enviado ou exposto.
 - Falhas de injeção de conteúdo (XSS) ou de política de segurança de conteúdo (CSP).
 - Telefone, endereço ou link de um canal de ajuda que leve para o lugar errado de propósito.
