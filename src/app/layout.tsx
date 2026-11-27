@@ -11,7 +11,7 @@ import { EmergencyBar, makeListHelpChannels } from "@/modules/help-channels";
 import { QuickExitShortcut } from "@/modules/quick-exit";
 import { makeGetSiteSettings } from "@/modules/site-settings";
 import { SiteFooter, SiteHeader } from "@/modules/site-shell";
-import { CONTENT_SECURITY_POLICY } from "@/shared/presentation/constants/content-security-policy.constant";
+import { buildContentSecurityPolicy } from "@/shared/utils/security/build-content-security-policy";
 
 export const metadata: Metadata = {
   title: { default: "Elo Lilás", template: "%s | Elo Lilás" },
@@ -29,11 +29,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     makeGetSiteSettings().execute(),
     makeListHelpChannels().execute({ scope: "emergency-bar" }),
   ]);
+  const contentSecurityPolicy = buildContentSecurityPolicy({ isDevelopment: process.env.NODE_ENV === "development" });
 
   return (
     <html lang="pt-BR" data-scroll-behavior="smooth">
       <head>
-        <meta httpEquiv="Content-Security-Policy" content={CONTENT_SECURITY_POLICY} />
+        <meta httpEquiv="Content-Security-Policy" content={contentSecurityPolicy} />
       </head>
       <body>
         <QuickExitShortcut />
