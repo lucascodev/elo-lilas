@@ -7,12 +7,13 @@ import "./globals.css";
 
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { makeWebAnalyticsConfig, WebAnalyticsBeacon } from "@/modules/analytics";
+import { ClickEventTracker, makeClickTrackingConfig, makeWebAnalyticsConfig, WebAnalyticsBeacon } from "@/modules/analytics";
 import { EmergencyBar, makeListHelpChannels } from "@/modules/help-channels";
 import { QuickExitShortcut } from "@/modules/quick-exit";
 import { makeGetSiteSettings } from "@/modules/site-settings";
 import { SiteFooter, SiteHeader } from "@/modules/site-shell";
 import { buildContentSecurityPolicy } from "@/shared/utils/security/build-content-security-policy";
+import { mergeContentSecurityPolicySources } from "@/shared/utils/security/merge-content-security-policy-sources";
 
 export const metadata: Metadata = {
   title: { default: "Elo Lilás", template: "%s | Elo Lilás" },
@@ -31,9 +32,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     makeListHelpChannels().execute({ scope: "emergency-bar" }),
   ]);
   const webAnalytics = makeWebAnalyticsConfig();
+  const clickTracking = makeClickTrackingConfig();
   const contentSecurityPolicy = buildContentSecurityPolicy({
     isDevelopment: process.env.NODE_ENV === "development",
-    extraSources: webAnalytics?.contentSecurityPolicySources,
+    extraSources: mergeContentSecurityPolicySources([webAnalytics?.contentSecurityPolicySources, clickTracking?.contentSecurityPolicySources]),
   });
 
   return (
@@ -49,6 +51,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         </main>
         <SiteFooter siteName={settings.siteName} partnerName={settings.partnerName} contentReviewedAt={settings.contentReviewedAt} />
         <EmergencyBar channels={emergencyChannels} />
+        {clickTracking && <ClickEventTracker countEndpoint={clickTracking.countEndpoint} />}
         {webAnalytics && <WebAnalyticsBeacon token={webAnalytics.token} beaconScriptUrl={webAnalytics.beaconScriptUrl} />}
       </body>
     </html>
