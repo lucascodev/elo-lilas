@@ -46,6 +46,7 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
           NEXT_TELEMETRY_DISABLED: 1
           CLOUDFLARE_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_ANALYTICS_TOKEN }}
+          GOATCOUNTER_CODE: ${{ secrets.GOATCOUNTER_CODE }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
